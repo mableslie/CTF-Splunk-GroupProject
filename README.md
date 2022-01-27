@@ -1,0 +1,2 @@
+# CTF-Splunk-GroupProject
+This is a student project used to raise awareness on information security as part of the Group Project (SOC09115) module. Capture the Flag (CTF) is an information security competition that challenges contestants to solve a variety of tasks. This project would be focused on creating a Jeopardy style CTF game, where individuals or groups of players would attempt to solve different scenarios, using Splunk, to earn points and compete against one another.
