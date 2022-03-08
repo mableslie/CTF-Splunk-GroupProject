@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head >
+		<title> Splunk CTF Group  </title>
+		<link rel ="stylesheet" href="project.css">
+	</head >
+	<body >
+		<h1> Splunk CTF Environment </h1>
+			<div class="banner">
+				<div class="navbar">
+					<img src= "Logo.png" class="logo"> 
+					<ul>
+						<li><a href="#">Tutorial </a></li>
+						<li><a href="#">Questions</a></li>
+						<li><a href="#">Leaderboard</a></li>
+					</ul>
+				</div>
+				<p style="color:white"> INTRODUCTION </p>
+			</div>
+	</body >
+</html>
