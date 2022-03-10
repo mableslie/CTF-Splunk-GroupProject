@@ -20,7 +20,7 @@
 			
 				<div class="navbar">
 					<ul>
-						<li><a href="Tutorial Page/Tutorial.html">Tutorial </a></li>
+						<li><a href="Tutorial.html">Tutorial </a></li>
 						<li><a href="Questions.html">Questions</a></li>
 						<li><a href="Leaderboard.html">Leaderboard</a></li>
 					</ul>
