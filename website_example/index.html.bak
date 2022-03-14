@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="CSS/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+		<title>Capture The Flag</title>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="container">
+				<img src="Images/FlagCTF.png" alt="" />
+				<div class="logo">Splunk CTF</div>
+				<ul class="nav">
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<header class="header">
+			<div class="container">
+				<div>
+					<h1>Capture The Flag Tutorial</h1>
+					<p>
+						This tutorial was created by Calum to help you learn the basics of using Splunk to search data. Splunk is a very important tool used within the Cyber Security industry.
+					</p>
+				</div>
+				<img src="Images/flag2.png" alt="" />
+			</div>
+		</header>
+		<section class="boxes">
+			<div class="container">
+				<div class="box">
+					<h2>Heading 1</h2>
+					<p>
+						Some information about Heading 1
+					</p>
+				</div>
+				<div class="box">
+					<h2>Heading 2</h2>
+					<p>
+						Some information about Heading 2
+					</p>
+				</div>
+				<div class="box">
+					<h2>Heading 3</h2>
+					<p>
+						Some information about Heading 3
+					</p>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
