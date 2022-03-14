@@ -1,0 +1,22 @@
+
+
+
+
+
+h3 {
+	margin-bottom: 15px;
+}
+
+.header2 h3{
+	font-size: 2rem;
+	font-weight: bold;
+	line-height: 2;
+    
+}
+
+
+.header2{
+	background-color: cornflowerblue;
+	color: #fff;
+	min-height: 200px;
+}
