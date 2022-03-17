@@ -1,6 +1,5 @@
 
-/* https://github.com/kevin578/javascript-quiz
-OPEN QUESTIONS */
+
 
 body {
 	font-family: 'Lato', sans-serif;
@@ -77,9 +76,6 @@ input {
 	display: inline;
 } 
 
-
-/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_tooltip
-THE HINT BUTTONS */
 
 .tooltip {
   position: relative;
