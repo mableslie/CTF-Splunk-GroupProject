@@ -55,15 +55,109 @@
 				</div>
 			</div>
 		</section>
-		<header class="header2">
+		<section class="boxes_two">
 			<div class="container">
-				<div>
+				<div class="box_two">
+						<p>
+							Before you undertake the quiz, a few example questions have been provided. These will provide you with insight of how the quiz is structured and provide a basic example of how to search in Splunk. The example questions are as follows:
+						</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="box_two">
+						<h2>
+							QUESTION 1:
+						</h2>
+						<p>
+							How many simulation games were sold?
+						</p>
+						<br>
+						<p>
+							Step 1: To begin searching, first ensure that the filter at the top right has been set to “All time” and enter “*” in the search bar to display all results.
+						</p>
+						<br>
+						<img src="../Images/q1_1.png"/>
+						<br>
+						<p>
+							Step 2: By browsing the fields at the left-hand side, you can deduce what filter may be needed to narrow down the search. 
+						</p>
+						<br>
+						<img src="../Images/q1_2.png"/>
+						<br>
+						<P>
+							Step 3: For this first question, the output can easily be found by selecting the “categoryID” filter and making “SIMULATION” its value. The Input should look this this:
+						</P>
+						<br>
+						<img src="../Images/q1_3.png"/>
+						<br>
+						<p>
+							Something
+						</p>
+						<br>
+						<img src="../Images/q1_4.png"/>
+						<img src="../Images/q1_5.png"/>
+						<br>
+						<p>
+							Answer: 273
+						</p>
+
+				</div>
+			</div>
+			<div class="container">
+				<div class="box_two">
+					<h2>
+						QUESTION 2:
+					</h2>
 					<p>
-						Before you undertake the quiz, a few example questions have been provided. These will provide you with insight of how the quiz is structured and provide a basic example of how to search in Splunk. The example questions are as follows:
+						What is the first IP address that gave an incorrect password?
+					</p>
+					<br>
+					<p>
+						This question requires the use of the pipe symbol. Firstly, you must search for all entries pertaining to failed passwords, this can be carried out using “fail* password”. After carrying out this search, it can be deduced that the output is in descending order therefore to identify the first address more easily, a pipe can be used followed by “reverse” which will put the output into ascending order. The input should now look like this:
+					</p>
+					<img src="../Images/q2_1.png"/>
+					<br>
+					<img src="../Images/q2_2.png"/>
+					<br>
+					<img src="../Images/q2_3.png"/>
+					<br>
+					<img src="../Images/q2_4.png"/>
+					<br>
+					<p>
+						Answer: 118.142.68.222
 					</p>
 				</div>
 			</div>
-		</header>
-		
+			<div class="container">
+				<div class="box_two">
+					<h2>
+						QUESTION 3:
+					</h2>
+					<p>
+						What is the number of accesses for GET from any IP address which starts with 81?
+					</p>
+					<br>
+					<p>
+						Similar to the input for question 2, a pipe will also be required to carry out this operation. The first part of the input will be a simply “get” search, the next part will require knowledge of regular expression. For more information on regular expression, follow the link below:
+					</p>
+					<br>
+					<p>
+						<a href="https://www.rexegg.com/regex-quickstart.html">Regex Quickstart</a>
+					</p>
+					<br>
+					<img src="../Images/q3_1.png"/>
+					<br>
+					<p>
+						To find all IP addresses beginning with 81, use “regex_raw” followed by the regular expression for the IP addresses, “81\.\d{1,3}\.\d{1,3}\.\d{1,3}". The input should look like this:
+					</p>
+					<br>
+					<img src="../Images/q3_2.png"/>
+					<br>
+					<p>
+						Answer: 276
+					</p>
+				</div>
+			</div>
+		</section>			
 	</body>
 </html>
