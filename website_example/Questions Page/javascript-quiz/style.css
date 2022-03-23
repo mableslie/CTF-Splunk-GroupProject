@@ -1,5 +1,14 @@
 
 
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  
+}
+
+
+
 
 body {
 	font-family: 'Lato', sans-serif;
@@ -52,9 +61,9 @@ input {
 
 }
 
-#after_submit {
+#submission {
 	visibility: hidden;
-	background: #ff5459;
+	background: #54b8ff;
 	padding: 10px 20px 10px 20px;
 	width: 400px;
 	border-radius: 20px;
@@ -65,14 +74,14 @@ input {
 
 }
 
-#picture {
+#picture{
 	width: 375px;
 	height: 245px;
 }
 
 
 
-#mc {
+#option {
 	display: inline;
 } 
 
