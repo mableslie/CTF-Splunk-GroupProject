@@ -34,7 +34,7 @@
 				<div>
 					<h3>Tutorial</h3>
 					<p>
-						In this quiz, you will be presented with 10 questions. These will come in the form of short answer and multiple-choice questions and your answers will be presented as an overall score when the quiz has been completed. Each question will have a hint provided to you if you are unsure where to start. To complete these questions, you should have access to Splunk Enterprise and have the dataset provided added to Splunk. The download link for Splunk Enterprise and the dataset can be found here:
+						In the Splunk Challenge you will be presented with 10 questions. The questions will be presented in short answer and multiple-choice style formats. Once completed, your answers will be used to calculate an overall score, where you will be ranked against other participants who have completed the challenge. In order to participate in the Splunk challenge, you will be required to have access to the latest version of the Splunk Enterprise software, as well as the Buttercup games dataset. The download links for both can be found below.
 					</p>
 				</div>
 			</div>
@@ -59,102 +59,112 @@
 			<div class="container">
 				<div class="box_two">
 						<p>
-							Before you undertake the quiz, a few example questions have been provided. These will provide you with insight of how the quiz is structured and provide a basic example of how to search in Splunk. The example questions are as follows:
+							Before undertaking the challenge, here are three examples of how you might navigate and search through data using the Splunk software.
 						</p>
 				</div>
 			</div>
 			<div class="container">
 				<div class="box_two">
 						<h2>
-							QUESTION 1:
+							EXAMPLE 1:
 						</h2>
 						<p>
-							How many simulation games were sold?
+							How many simulation games were purchased?
 						</p>
 						<br>
 						<p>
-							Step 1: To begin searching, first ensure that the filter at the top right has been set to “All time” and enter “*” in the search bar to display all results.
+							Step 1: To begin the search, ensure the filter at the top right has been set to “All time” and then enter “*” within the search bar in order to display all possible events within the dataset.
 						</p>
 						<br>
 						<img src="../Images/q1_1.png"/>
 						<br>
 						<p>
-							Step 2: By browsing the fields at the left-hand side, you can deduce what filter may be needed to narrow down the search. 
+							Step 2: First, the events must be filtered in order to narrow down the search results. As you are looking for only the simulation type games, these can be found by selecting the appropriate category ID, which can be achieved by typing “categoryid=simulation” in the search bar after the “*”.
 						</p>
 						<br>
 						<img src="../Images/q1_2.png"/>
 						<br>
 						<P>
-							Step 3: For this first question, the output can easily be found by selecting the “categoryID” filter and making “SIMULATION” its value. The Input should look this this:
+							Step 3: Finally, you must now further narrow the scope of the search by isolating only those events which contain the purchasing of the game. This can be done by including “action=purchase” within the search bar. Showing a total of 273 events.
 						</P>
 						<br>
 						<img src="../Images/q1_3.png"/>
 						<br>
 						<p>
-							Something
+							<strong>ANSWER: 273</strong>
+						</p>
+						<br>
+						<p>
+							Alternatively, instead of typing the specific search parameters into the search bar, the events can also be narrowed by using the “SELECTED FIELDS” and “INTERESTING FIELDS” filters on the left-hand side of the Splunk dashboard interface as seen below.
 						</p>
 						<br>
 						<img src="../Images/q1_4.png"/>
 						<img src="../Images/q1_5.png"/>
 						<br>
-						<p>
-							Answer: 273
-						</p>
 
 				</div>
 			</div>
 			<div class="container">
 				<div class="box_two">
 					<h2>
-						QUESTION 2:
+						EXAMPLE 2:
 					</h2>
 					<p>
 						What is the first IP address that gave an incorrect password?
 					</p>
 					<br>
 					<p>
-						This question requires the use of the pipe symbol. Firstly, you must search for all entries pertaining to failed passwords, this can be carried out using “fail* password”. After carrying out this search, it can be deduced that the output is in descending order therefore to identify the first address more easily, a pipe can be used followed by “reverse” which will put the output into ascending order. The input should now look like this:
+						Step 1: Firstly, you must search for all entries pertaining to failed passwords, this can be carried out using “fail* password”.
 					</p>
+					<br>
 					<img src="../Images/q2_1.png"/>
 					<br>
 					<img src="../Images/q2_2.png"/>
+					<br>
+					<p>
+						Step 2: The initial search results were correct but were showing the events in order of the most recent. As the example requires you to find the first IP address a pipe symbol along with the word “reverse” can be used to switch the order from most recent to oldest.
+					</p>
 					<br>
 					<img src="../Images/q2_3.png"/>
 					<br>
 					<img src="../Images/q2_4.png"/>
 					<br>
 					<p>
-						Answer: 118.142.68.222
+						<strong>Answer: 118.142.68.222</strong>
 					</p>
 				</div>
 			</div>
 			<div class="container">
 				<div class="box_two">
 					<h2>
-						QUESTION 3:
+						EXAMPLE 3:
 					</h2>
 					<p>
-						What is the number of accesses for GET from any IP address which starts with 81?
+						What is the number of GET requests that originated from an IP address starting with 81?
 					</p>
 					<br>
 					<p>
-						Similar to the input for question 2, a pipe will also be required to carry out this operation. The first part of the input will be a simply “get” search, the next part will require knowledge of regular expression. For more information on regular expression, follow the link below:
+						This example will require a basic knowledge of using regular expressions (regex). For further information on how utilise regex, follow the link below.
 					</p>
 					<br>
 					<p>
 						<a href="https://www.rexegg.com/regex-quickstart.html">Regex Quickstart</a>
 					</p>
 					<br>
+					<p>
+						Step 1: To filter the events to only GET requests, “get” must be typed into the search bar.
+					</p>
+					<br>
 					<img src="../Images/q3_1.png"/>
 					<br>
 					<p>
-						To find all IP addresses beginning with 81, use “regex_raw” followed by the regular expression for the IP addresses, “81\.\d{1,3}\.\d{1,3}\.\d{1,3}". The input should look like this:
+						Step 2: To find all IP addresses beginning with 81, use “regex_raw” followed by the regular expression for the IP addresses, “81\.\d{1,3}\.\d{1,3}\.\d{1,3}".
 					</p>
 					<br>
 					<img src="../Images/q3_2.png"/>
 					<br>
 					<p>
-						Answer: 276
+						<strong>Answer: 276</strong>
 					</p>
 				</div>
 			</div>
