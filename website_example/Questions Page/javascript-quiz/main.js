@@ -129,7 +129,7 @@ function examine(){
 	document.getElementById("submission").style.visibility = "visible";
 
 	document.getElementById("note").innerHTML = notes[result];
-	document.getElementById("number_points").innerHTML =   "You have earned " + points + " point/s.";
+	document.getElementById("number_points").innerHTML =   "You have earned " + points + " point(s).";
 	document.getElementById("name").innerHTML = question_0 ;
 
 	document.getElementById("picture").src = images[result];
