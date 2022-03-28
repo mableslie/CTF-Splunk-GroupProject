@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+table, th, td 
+{
+border: 1px cornflowerblue;
+}
+</style>
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="../CSS/style.css">
 		<link rel="stylesheet" href="../CSS/styleleaderboard.css">
 		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 		<title>Capture The Flag</title>
@@ -29,16 +34,25 @@
 				</ul>
 			</div>
 		</nav>
-		<header class="header2">
+		<header class="header">
 			<div class="container">
 				<div>
-					<h1>Leaderboard</h1>
+					<h1>CTF Leader Board</h1>
 					<p>
-						Welcome to the CTF Leaderboard! Check out the top players in our quiz based on the buttercup games dataset. 
+					 Check out the top cometitors for this quiz based on the buttercup games dataset.
 					</p>
-					<img src="../Images/therealflag.png"/>
 				</div>
+				<img src="therealflag.png" alt="" />
 			</div>
 		</header>
+
+		 <table style="width:100%">
+		  <tr>
+		     <th>Position</th>
+             <th>Name</th>
+             <th>Score</th>
+		  </tr>
+
+		 </table>
 	</body>
 </html>
