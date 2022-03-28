@@ -2,9 +2,9 @@
 
 
 
-function examine(){
-
-
+function examine()
+{
+    //Define each question
 
 	var question_0 = document.quiz.question_0.value;
 	var question_1 = document.quiz.question_1.value;
@@ -30,11 +30,10 @@ function examine(){
 	var question_21 = document.quiz.question_21.value;
 	var question_22 = document.quiz.question_22.value;
 
+    // User points start at 0
 	var points = 0;
 
-	
-
-
+    // Add point if question correct
 	if (question_1 == "34282") {
 		points++;
 }
@@ -98,19 +97,16 @@ function examine(){
 	if (question_21 == "98") {
 		points ++;
 }		
-	if (question_22 == "118.142.68.222") {
-		points ++;
+    if (question_22 == "118.142.68.222") {
+        points++;
 }
-	
 
-
-
-	
-	
+	//Feedback dependent on user score 
 	var images = ["img/maximum.gif", "img/average.gif", "img/minimum.gif"];
 	var notes = ["Look at those skills!", "That's not bad", "You can do better"];
 	
 	var result;
+
 
 	if (points <= 8 ) {
 		result = 2;
@@ -132,5 +128,23 @@ function examine(){
 	document.getElementById("number_points").innerHTML =   "You have earned " + points + " point(s).";
 	document.getElementById("name").innerHTML = question_0 ;
 
-	document.getElementById("picture").src = images[result];
-	}
+    document.getElementById("picture").src = images[result];
+
+    //export data gathered from quiz to JSON file for Leaderboard page
+  
+        var userdata = new Array(name, points);
+        let csvContent = "data:text/csv;charset=utf-8,";
+
+        rows.forEach(function (rowArray) {
+            let row = rowArray.join(",");
+            csvContent += row + "\r\n";
+    });
+    let csvContent = "data:text/csv;charset=utf-8,";
+
+    rows.forEach(function (rowArray) {
+        let row = rowArray.join(",");
+        csvContent += row + "\r\n";
+    });
+    
+}
+
