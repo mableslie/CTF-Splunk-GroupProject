@@ -132,19 +132,19 @@ function examine()
 
     //export data gathered from quiz to JSON file for Leaderboard page
   
-        var userdata = new Array(name, points);
-        let csvContent = "data:text/csv;charset=utf-8,";
+    //     var userdata = new Array(name, points);
+    //     let csvContent = "data:text/csv;charset=utf-8,";
 
-        rows.forEach(function (rowArray) {
-            let row = rowArray.join(",");
-            csvContent += row + "\r\n";
-    });
-    let csvContent = "data:text/csv;charset=utf-8,";
+    //     rows.forEach(function (rowArray) {
+    //         let row = rowArray.join(",");
+    //         csvContent += row + "\r\n";
+    // });
+    // let csvContent = "data:text/csv;charset=utf-8,";
 
-    rows.forEach(function (rowArray) {
-        let row = rowArray.join(",");
-        csvContent += row + "\r\n";
-    });
+    // rows.forEach(function (rowArray) {
+    //     let row = rowArray.join(",");
+    //     csvContent += row + "\r\n";
+    // });
     
 }
 
