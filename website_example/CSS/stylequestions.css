@@ -109,3 +109,16 @@ h3 {
 	margin: 0 auto;
 	padding: 0 30px;
 }
+
+.hide-question {
+	display: none;
+}
+  
+.show-question {
+	display: block;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}

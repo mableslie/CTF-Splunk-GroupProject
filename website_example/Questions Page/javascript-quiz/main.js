@@ -1,6 +1,7 @@
 
 
-
+var questionIndex = 0;
+var questions = document.getElementsByClassName('question');
 
 function examine()
 {
@@ -145,6 +146,7 @@ function examine()
     //     let row = rowArray.join(",");
     //     csvContent += row + "\r\n";
     // });
-    
 }
+
+
 
