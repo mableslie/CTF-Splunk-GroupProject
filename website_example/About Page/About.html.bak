@@ -76,21 +76,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="boxes_two">
-			<div class="container">
-				<div class="box_two">
-					<h2>Robert</h2>
-					<p>
-						I am a Cybersecurity and forensics student doing the 3rd year at Napier University.  I am enthusiastic with aspirations to continue to develop my knowledge and leverage own skills into practical experience.  My interest is in computer networking, cloud technologies and cyber security.  I consider myself as a positive and communicative person that can thrive in the team environment.
-					</p>
-				</div>
-				<div class="box_two">
-					<h2>Calum</h2>
-					<p>
-						Third year Cybersecurity and forensics student with an interest in computer networking, cloud technologies, cybersecurity, and programming.  I am proficient in building relationships and optimising operations, while also able to generate ideas with limited direction.
-					</p>
-				</div>
-			</div>
-		</section>		
+				
+		
 	</body>
-</html> 
+</html>
