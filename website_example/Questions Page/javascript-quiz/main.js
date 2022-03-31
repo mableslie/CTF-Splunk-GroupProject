@@ -2,7 +2,8 @@ var questionIndex = 0;
 var questions = document.getElementsByClassName('question');
 
 function examine() {
-  //Define each question
+
+    //Define each question
 
   var question_0 = document.quiz.question_0.value;
   var question_1 = document.quiz.question_1.value;
@@ -121,27 +122,30 @@ function examine() {
 
   document.getElementById('note').innerHTML = notes[result];
   document.getElementById('number_points').innerHTML =
-    'You have earned ' + points + ' point(s).';
-  document.getElementById('name').innerHTML = question_0;
+        'You have earned ' + points + ' point(s).';
+  const username = document.getElementById('username').innerHTML = question_0;
 
-  document.getElementById('picture').src = images[result];
-
-  //export data gathered from quiz to JSON file for Leaderboard page
-
-  var userdata = new Array(name, points);
-  let csvContent = 'data:text/csv;charset=utf-8,';
-
-  rows.forEach(function (rowArray) {
-    let row = rowArray.join(',');
-    csvContent += row + '\r\n';
-  });
-
-  rows.forEach(function (rowArray) {
-    let row = rowArray.join(',');
-    csvContent += row + '\r\n';
-  });
+    document.getElementById('picture').src = images[result];
+    save(points,username);
 }
 
+function save(points, username) {
+    const tbody = document.querySelector('#dtable tbody');
+    tbody.appendChild(createRow(username, points));
+}
+
+function createRow(username, points) {
+    const tr = document.createElement('tr');
+    tr.appendChild(createTd(username));
+    tr.appendChild(createTd(points));
+    return tr;
+}
+
+function createTd(value) {
+    const td = document.createElement('td');
+    td.innerText = value;
+    return td;
+}
 
 function showQuestionAtIndex() {
   for (let index = 0; index < questions.length; index++) {
