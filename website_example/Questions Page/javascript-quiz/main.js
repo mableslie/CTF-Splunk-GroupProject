@@ -130,6 +130,7 @@ function examine() {
 }
 
 function save(points, username) {
+    localStorage.setItem(points, username);
     const tbody = document.querySelector('#dtable tbody');
     tbody.appendChild(createRow(username, points));
 }
@@ -139,6 +140,7 @@ function createRow(username, points) {
     tr.appendChild(createTd(username));
     tr.appendChild(createTd(points));
     return tr;
+    return localStorage.getItem(username, points) || " ";
 }
 
 function createTd(value) {
@@ -146,6 +148,7 @@ function createTd(value) {
     td.innerText = value;
     return td;
 }
+
 
 function showQuestionAtIndex() {
   for (let index = 0; index < questions.length; index++) {
