@@ -21,13 +21,7 @@ function examine() {
   var question_13 = document.quiz.question_13.value;
   var question_14 = document.quiz.question_14.value;
   var question_15 = document.quiz.question_15.value;
-  var question_16 = document.quiz.question_16.value;
-  var question_17 = document.quiz.question_17.value;
-  var question_18 = document.quiz.question_18.value;
-  var question_19 = document.quiz.question_19.value;
-  var question_20 = document.quiz.question_20.value;
-  var question_21 = document.quiz.question_21.value;
-  var question_22 = document.quiz.question_22.value;
+
 
   // User points start at 0
   var points = 0;
@@ -78,27 +72,7 @@ function examine() {
   if (question_15 == 'April 24,2014') {
     points++;
   }
-  if (question_16 == '401') {
-    points++;
-  }
-  if (question_17 == '1445') {
-    points++;
-  }
-  if (question_18 == '276') {
-    points++;
-  }
-  if (question_19 == 'April 19,2014') {
-    points++;
-  }
-  if (question_20 == '33253') {
-    points++;
-  }
-  if (question_21 == '98') {
-    points++;
-  }
-  if (question_22 == '118.142.68.222') {
-    points++;
-  }
+
 
   //Feedback dependent on user score
   var images = ['img/maximum.gif', 'img/average.gif', 'img/minimum.gif'];
@@ -106,15 +80,16 @@ function examine() {
 
   var result;
 
-  if (points <= 8) {
+  
+  if (points <= 7) {
     result = 2;
   }
 
-  if (points > 8 && points <= 16) {
+  if (points > 7 && points <= 11) {
     result = 1;
   }
 
-  if (points > 16) {
+  if (points > 11) {
     result = 0;
   }
 
