@@ -1,10 +1,24 @@
+//EDINBURGH NAPIER UNIVERSITY
+// AUTHORS:
+////ROBERT KISTER, MAB LESLIE, ANDREEA OCTAVIA CONSTANTIN, SERGIO RODRIGUEZ CHAVEZ, CHRISTOPHER MCGRAIL AND CALUM RAE
+//THIS SCRIPT IS IN PARTIAL FULTILMENT OF SOC09115 GROUP PROJECT
+//VERSION 1.0.0
+
+//The purpose of this script is to run the main game engine for the 'questions' page
+//The corresponding difficulty challenge pages, CSS and HTML files are included in the same directory 
+
+//The questions in this script associate with 'Challenge 2' 
+
+//Declare index of questions list
+//Retrieve content of questions from HTML file using the 'question' class
 var questionIndex = 0;
 var questions = document.getElementsByClassName('question');
 
+//Main script function, handles assigning answers to questions, the result after submit is clicked and saving the data for future use in leaderboard
 function examine() {
 
-    //Define each question
 
+  //Append variable for each answer to its corresponding question
   var question_0 = document.quiz.question_0.value;
   var question_1 = document.quiz.question_1.value;
   var question_2 = document.quiz.question_2.value;
@@ -21,10 +35,7 @@ function examine() {
   var question_13 = document.quiz.question_13.value;
   var question_14 = document.quiz.question_14.value;
   var question_15 = document.quiz.question_15.value;
-
-
-
-
+    
   // User points start at 0
   var points = 0;
 
@@ -73,15 +84,13 @@ function examine() {
   }
   if (question_15 == 'None of the above') {
     points++;
-  }
-  
+    }
 
-
-
-  //Feedback dependent on user score
+  //Depending on the users score, feedback and a funny GIF is displayed after submit is clicked
   var images = ['img/maximum.gif', 'img/average.gif', 'img/minimum.gif'];
   var notes = ['Look at those skills!', "That's not bad", 'You can do better'];
 
+  //Create variable to store integer result that will display points, feedback and GIF
   var result;
 
   if (points <= 7) {
@@ -96,22 +105,26 @@ function examine() {
     result = 0;
   }
 
+    //Display elements to HTML file
   document.getElementById('submission').style.visibility = 'visible';
-
   document.getElementById('note').innerHTML = notes[result];
-  document.getElementById('number_points').innerHTML = 'You have earned ' + points + ' point(s).';
-  const username = document.getElementById('username').innerHTML = question_0;
-
-  document.getElementById('picture').src = images[result];
+    document.getElementById('number_points').innerHTML = 'You have earned ' + points + ' point(s).';
+    //Get username from user entry before quiz starts 
+    const username = document.getElementById('username').innerHTML = question_0;
+    document.getElementById('picture').src = images[result];
+    //Call method save(), passing variables points and username
   save(points,username);
 }
 
+//The purpose of this function is to save the username and points collected in examine() in local storage for the leaderboard in local storage
 function save(points, username) {
     localStorage.setItem(points, username);
+    //creates a table appending username and score to a new row
     const tbody = document.querySelector('#dtable tbody');
     tbody.appendChild(createRow(username, points));
 }
 
+//The purpose of thiss function is to display the value created in the table row in save() method
 function createRow(username, points) {
     const tr = document.createElement('tr');
     tr.appendChild(createTd(username));
@@ -120,6 +133,7 @@ function createRow(username, points) {
     return localStorage.getItem(username, points) || " ";
 }
 
+//The purpose of this function creates a new element in the HTML file to display what was created in the above functions
 function createTd(value) {
     const td = document.createElement('td');
     td.innerText = value;
@@ -127,6 +141,7 @@ function createTd(value) {
 }
 
 
+//The purpose of this function is to show all questions in the correct order 
 function showQuestionAtIndex() {
   for (let index = 0; index < questions.length; index++) {
     if (index === questionIndex) {
@@ -141,20 +156,24 @@ function showQuestionAtIndex() {
   
 }
 
+//The purpose of this function is to move from one question to the next
 function nextQuestion() {
 	if (questionIndex === questions.length - 1) {
     console.log('This is the last question');
 	} else {
-    questionIndex += 1;
+        questionIndex += 1;
+         //shows the questions in correct order
     showQuestionAtIndex();
   }   
 }
-
+//The purpose of this function is to move from one question to the previous one
 function previousQuestion() {
 	if (questionIndex === 0) {
     console.log('This is the first question');
 	} else {
-    questionIndex -= 1;
+        questionIndex -= 1;
+
+         //shows the questions in correct order
     showQuestionAtIndex();
   }
 }

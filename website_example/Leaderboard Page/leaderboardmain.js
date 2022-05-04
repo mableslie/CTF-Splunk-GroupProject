@@ -1,4 +1,0 @@
-function retrieveCookie(cname,cscore)
-{
-
-}
