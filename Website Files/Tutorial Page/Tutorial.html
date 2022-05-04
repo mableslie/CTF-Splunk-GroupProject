@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../CSS/style.css">
+		<link rel="stylesheet" href="../CSS/styletutorial.css">
+		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+		<title>Capture The Flag</title>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="container">
+				<div class="logo">Splunk CTF</div>
+				<ul class="nav">
+					<li>
+						<a href="../index.html">Home</a>
+					</li>
+					<li>
+						<a href="../Questions Page/QuestionsPage.html">Questions</a>
+					</li>
+					<li>
+						<a href="../About Page/About.html">About</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<header class="header2">
+			<div class="container">
+				<div>
+					<h3>Tutorial</h3>
+					<p>
+						In the Splunk Challenge you will be presented with 15 questions in each challenge. The questions will be presented in short answer and multiple-choice style formats. Once completed, your answers will be used to calculate an overall score, where you will be ranked against other participants who have completed the challenge. In order to participate in the Splunk challenge, you will be required to have access to the latest version of the Splunk Enterprise software, as well as the Buttercup games dataset. The download links for both can be found below.
+					</p>
+					<br>
+				</div>
+			</div>
+		</header>
+		<section class="boxes">
+			<div class="container">
+				<div class="box">
+					<h2>Splunk Enterprise</h2>
+					<p>
+						<a href="https://www.splunk.com/en_us/download/splunk-enterprise.html">Click Here To Download</a>
+					</p>
+				</div>
+				<div class="box">
+					<h2>Buttercup Games Dataset</h2>
+					<p>
+						<a href="#">Click Here To Download</a>
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="boxes_two">
+			<div class="container">
+				<div class="box_two">
+						<p>
+							Before undertaking the challenge, here are three examples of how you might navigate and search through data using the Splunk software.
+						</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="box_two">
+						<h2>
+							EXAMPLE 1:
+						</h2>
+						<p>
+							How many simulation games were purchased?
+						</p>
+						<br>
+						<p>
+							Step 1: To begin the search, ensure the filter at the top right has been set to “All time” and then enter “*” within the search bar in order to display all possible events within the dataset.
+						</p>
+						<br>
+						<img src="../Images/q1_1.png"/>
+						<br>
+						<p>
+							Step 2: First, the events must be filtered in order to narrow down the search results. As you are looking for only the simulation type games, these can be found by selecting the appropriate category ID, which can be achieved by typing “categoryid=simulation” in the search bar after the “*”.
+						</p>
+						<br>
+						<img src="../Images/q1_2.png"/>
+						<br>
+						<P>
+							Step 3: Finally, you must now further narrow the scope of the search by isolating only those events which contain the purchasing of the game. This can be done by including “action=purchase” within the search bar. Showing a total of 273 events.
+						</P>
+						<br>
+						<img src="../Images/q1_3.png"/>
+						<br>
+						<p>
+							<strong>ANSWER: 273</strong>
+						</p>
+						<br>
+						<p>
+							Alternatively, instead of typing the specific search parameters into the search bar, the events can also be narrowed by using the “SELECTED FIELDS” and “INTERESTING FIELDS” filters on the left-hand side of the Splunk dashboard interface as seen below.
+						</p>
+						<br>
+						<img src="../Images/q1_4.png"/>
+						<img src="../Images/q1_5.png"/>
+						<br>
+
+				</div>
+			</div>
+			<div class="container">
+				<div class="box_two">
+					<h2>
+						EXAMPLE 2:
+					</h2>
+					<p>
+						What is the first IP address that gave an incorrect password?
+					</p>
+					<br>
+					<p>
+						Step 1: Firstly, you must search for all entries pertaining to failed passwords, this can be carried out using “fail* password”.
+					</p>
+					<br>
+					<img src="../Images/q2_1.png"/>
+					<br>
+					<img src="../Images/q2_2.png"/>
+					<br>
+					<p>
+						Step 2: The initial search results were correct but were showing the events in order of the most recent. As the example requires you to find the first IP address a pipe symbol along with the word “reverse” can be used to switch the order from most recent to oldest.
+					</p>
+					<br>
+					<img src="../Images/q2_3.png"/>
+					<br>
+					<img src="../Images/q2_4.png"/>
+					<br>
+					<p>
+						<strong>Answer: 118.142.68.222</strong>
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="box_two">
+					<h2>
+						EXAMPLE 3:
+					</h2>
+					<p>
+						What is the number of GET requests that originated from an IP address starting with 81?
+					</p>
+					<br>
+					<p>
+						This example will require a basic knowledge of using regular expressions (regex). For further information on how utilise regex, follow the link below.
+					</p>
+					<br>
+					<p>
+						<a href="https://www.rexegg.com/regex-quickstart.html">Regex Quickstart</a>
+					</p>
+					<br>
+					<p>
+						Step 1: To filter the events to only GET requests, “get” must be typed into the search bar.
+					</p>
+					<br>
+					<img src="../Images/q3_1.png"/>
+					<br>
+					<p>
+						Step 2: To find all IP addresses beginning with 81, use “regex_raw” followed by the regular expression for the IP addresses, “81\.\d{1,3}\.\d{1,3}\.\d{1,3}".
+					</p>
+					<br>
+					<img src="../Images/q3_2.png"/>
+					<br>
+					<p>
+						<strong>Answer: 276</strong>
+					</p>
+				</div>
+			</div>
+		</section>			
+	</body>
+</html>
