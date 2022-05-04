@@ -113,16 +113,20 @@ function examine() {
     const username = document.getElementById('username').innerHTML = question_0;
     document.getElementById('picture').src = images[result];
     //Call method save(), passing variables points and username
-  save(points,username);
+    save(points, username);
+
+    retrieveRecords(points, username);
 }
 
 //The purpose of this function is to save the username and points collected in examine() in local storage for the leaderboard in local storage
 function save(points, username) {
-    localStorage.setItem(points, username);
+
+    window.localStorage.setItem('userdata', points, username);
     //creates a table appending username and score to a new row
     const tbody = document.querySelector('#dtable tbody');
     tbody.appendChild(createRow(username, points));
 }
+
 
 //The purpose of thiss function is to display the value created in the table row in save() method
 function createRow(username, points) {
@@ -134,12 +138,21 @@ function createRow(username, points) {
 }
 
 //The purpose of this function creates a new element in the HTML file to display what was created in the above functions
-function createTd(value) {
+function createTd(username, points) {
     const td = document.createElement('td');
-    td.innerText = value;
+    td.innerText = username, points;
     return td;
 }
 
+
+//this function retrieves the data from local storage and displays on leaderboard
+function retrieveRecords(username, points) {
+    console.log("retrieve records");
+    window.localStorage.getItem('userdata');
+    doucment.querySelector('#dtable tbody');
+    tbody.appendChild(createRow(username, points));
+
+}
 
 //The purpose of this function is to show all questions in the correct order 
 function showQuestionAtIndex() {
