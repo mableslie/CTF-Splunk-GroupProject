@@ -1,16 +1,19 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="../CSS/style.css">
-		<link rel="stylesheet" href="../CSS/stylequestions.css">
-		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-		<script src ="javascript-quiz/main.js"></script>
-		<title>Capture The Flag</title>
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/stylequestions.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="dist/sortable-tables.min.css">
+    <script src="dist/sortable-tables.min.js"></script>
+    <script src="javascript-quiz/main.js"></script>
+    <title>Capture The Flag</title>
+</head>
     <body>
+
         <nav class="navbar">
             <div class="container">
                 <div class="logo">Splunk CTF</div>
@@ -39,7 +42,7 @@
                 <div class="quiz1">
                     <div class="box_two question show-question">
                         <p class="questions">What is your name?</p>
-                        <input type="text" id="username" name="question_0"/>
+                        <input type="text" id="username" name="question_0" placeholder="usersname" required/>
                     </div>
 
 
@@ -252,7 +255,7 @@
                     <th style="width: 50%">
                         Username
                     </th>
-                    <th style="width: 100%">
+                    <th class =" numeric-sort"style="width: 100%">
                         Score
                     </th>
                 </tr>
